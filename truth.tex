@@ -1,0 +1,275 @@
+%-------------------------
+% Resume in Latex
+% Author : Wylliam Cantin Charawi
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper, 11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{ \vspace{-4pt}\scshape\raggedright\large }{}{0em}{}[
+\color{black}
+\titlerule
+\vspace{-5pt}
+]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{ \item\small{ {#1 \vspace{-2pt}} } }
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{-2pt}
+\item
+\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+  \textbf{#1}       & #2                 \\
+  \textit{\small#3} & \textit{\small #4} \\
+\end{tabular*}
+\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{ \item
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+  \textit{\small#1} & \textit{\small #2} \\
+\end{tabular*}
+\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{ \item
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+  \small#1 & #2 \\
+\end{tabular*}
+\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}
+\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}
+\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%https://www.reddit.com/r/cscareerquestions/comments/1577dm9/the_ultimate_guide_to_writing_your_resuume_for/
+
+\begin{document}
+
+% sanity check (temporary)
+\ifdefined\cvEngineering
+  \typeout{*** BUILDING ENGINEERING CV ***}
+\fi
+\ifdefined\cvResearch
+  \typeout{*** BUILDING RESEARCH CV ***}
+\fi
+  %----------HEADING----------
+  % \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  %   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+  %   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+  % \end{tabular*}
+
+  \begin{center}
+    \textbf{\Huge \scshape Wylliam Cantin Charawi, CEP, B.Eng} \\ %\vspace{1pt}
+    % \small (438) 345-4771 $|$
+    \href{mailto:wylliam.cantin-charawi.1@ens.etsmtl.ca}{wylliam.cantin-charawi.1@ens.etsmtl.ca}
+    $|$ \href{https://linkedin.com/in/wylliamcc}{\underline{LinkedIn}} %$|$
+    %\href{https://github.com/...}{\underline{github.com/jake}}
+  \end{center}
+  \vspace{-30pt}
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+
+    % Research-only Doctorate
+    \ifdefined\cvResearch
+      \resumeSubheading
+        {Doctorate of Engineering $|$ Computer Vision \& Graphics}{Montreal, QC}
+        {Multimedia Lab \& LIVIA $|$ École de Technologie Supérieure (ÉTS)}%
+        {Expected Graduation December 2027}
+    \fi
+
+    % Engineering-only Master's
+    \ifdefined\cvEngineering
+      \resumeSubheading
+        {Master of Applied Sciences $|$ Computer Vision \& Graphics}{Montreal, QC}
+        {Multimedia Lab \& ILLS $|$ École de Technologie Supérieure (ÉTS)}%
+        {Expected Graduation December 2025}
+    \fi
+
+    % Common to both CVs
+    \resumeSubheading
+      {Bachelor of Software Engineering}{Montreal, QC}
+      {École de Technologie Supérieure (ÉTS)}{Graduated August 2024}
+
+  \resumeSubHeadingListEnd
+
+  \vspace{-15pt}
+  %-----------EXPERIENCE-----------
+  \section{Experience}
+  \resumeSubHeadingListStart
+
+  \resumeSubheading {Computer Vision and Graphics Researcher}{May 2024 -- Present}
+  {CVG Kawasaki Laboratory, Kyushu University $|$ Multimedia Lab \& LIVIA, ÉTS}{Fukuoka, Japan \& Montreal, QC}
+  \resumeItemListStart \resumeItem{Submitted a paper to \textbf{3DV} introducing \textbf{Differentiable Clipped Centroidal Voronoi Tessellation (DCCVT)}, a novel framework for paving Voronoi diagrams with differentiable clipped centroids to extract high-quality meshes from implicit surfaces using \textbf{Pytorch}, outperforming SotA marching tetrahedra and Voronoi-based extraction methods.}
+  % \resumeItem{Developed a PyTorch-based pipeline integrating neural Signed Distance Function (SDF) models with Voronoi/Delaunay tessellations, enabling differentiable centroidal Voronoi optimization and adaptive up-sampling of zero-crossing regions for precise surface recovery.}
+  % \resumeItem{Designed custom CUDA kernels and vectorized PyTorch routines for efficient gradient and Laplacian computation inside tetrahedra using barycentric interpolation, significantly improving runtime and memory scalability.}
+  % \resumeItem{Implemented robust mesh extraction pipelines (\emph{Marching Tetrahedra, Voromesh, DCCVT}) and conducted large-scale evaluation on the Thingi32 dataset with metrics including Chamfer distance, F1-score, normal consistency, and watertightness.}
+  % \resumeItem{Proposed adaptive refinement heuristics (curvature-aware, spacing-based, and hemisphere sampling strategies) to improve surface discretization and mesh regularity across unconverged implicit fields.}
+  \resumeItemListEnd
+
+  \resumeSubheading {Computer Vision Research Developer}{May 2023 -- August 2023}
+  {Zebra Technologies $|$ Matrox Imaging Industrial Research Chair, LIVIA}{Montreal, QC}
+  \resumeItemListStart \resumeItem{Developed a \textbf{Python} pipeline tool to augment bar codes data-sets using \textbf{C++} and Matrox Imaging Library to create test files and run benchmarks on different AI models and algorithms, saving 1500\% costs }
+  %\resumeItem{Researched papers on state of the art of different topics of Computer Vision and Artificial Intelligence}
+  %\resumeItem{Hazmat project}
+  \resumeItem{Captured real-world hazmat label data, built and augmented a dataset, and trained an \textbf{RTMDet/YOLO} model to accurately recognize labels in video feeds with 98.2\% accuracy.}
+  \resumeItemListEnd
+
+  \resumeSubheading {Analyst Programmer}{January 2022 -- April 2022}
+  {Loto-Québec, Technologies Nter}{Montreal, QC} \resumeItemListStart \resumeItem{Developed and improved the performance of several \textbf{Vue.JS} components, which led to a fluid and responsive UI}
+  \resumeItem{Proposed a \textbf{Bootstrap} and \textbf{CSS} solution for the site typography, resulting in a responsive and dynamic UX}
+  \resumeItem{Implemented improvements to the Agile practices within the team, leading to the use of story points}
+  %        \resumeItem{Met with the internal client to understand and formulate their requests, then study their feasibility}
+  %        \resumeItem{Collaborated in the creation and development of websites via a web content manager (CMS)}
+  %\resumeItem{Integrate unit tests}
+  \resumeItemListEnd
+
+  \resumeSubheading {Junior Developer}{May 2021 -- August 2021}
+  {Vokeso - Gold Microsoft Partner}{Montreal, QC} \resumeItemListStart \resumeItem{Developed and customized \textbf{MC Dynamics 365 Business Central} extensions and reports}
+  \resumeItem{Developed a website using \textbf{HTML}, \textbf{CSS}, \textbf{React.JS}, \textbf{PHP}, \textbf{Postman API} and \textbf{MSSQL}}
+  \resumeItem{Compartmentalized database and processes using \textbf{Docker} and multiple Azure VMs}
+  \resumeItemListEnd
+
+  % \resumeSubheading
+  %   {Technology Application Technician}{September 2021 -- May 2024}
+  %   {École de Technologie Supérieure (ÉTS)}{Montreal, QC}
+  %   \resumeItemListStart
+  %     \resumeItem{Tutored students for their mechanical, electrical and optical physics lab activities (ING150, PHY332, PHY335)}
+  %   \resumeItemListEnd
+
+  \resumeSubheading {Software Engineering Representative Administrator}{September 2021 -- May 2024}
+  {ÉTS Student Association, AÉÉTS }{Montreal, QC} \resumeItemListStart
+  \resumeItem{Sat on AÉÉTS board of directors and managed a 1M\$ budget} \resumeItem{Organized social and technical activities for software engineering students}
+  \resumeItemListEnd
+
+  % \resumeSubheading
+  % {Scouting}{September 2007 -- Present}
+  % {274e groupe scout St-Ephrem}{Laval, QC}
+  % \resumeItemListStart
+  %   \resumeItem{Organized fundraisers, educational activities and camps for kids}
+  % \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+  \vspace{-15pt}
+
+  % -----------PROJECTS-----------
+  \section{Projects}
+  \resumeSubHeadingListStart \resumeProjectHeading
+  {\textbf{Voronoify} $|$ \emph{Python, CUDA C++, Rust}}{October 2025} \resumeItemListStart
+  \resumeItem{Engineered multiple high-performance implementations of a Voronoi image generator, targeting CPU, multi-core CPU, and GPU architectures to analyze performance trade-offs.}
+  \resumeItem{Developed a native CUDA C++ solution using the Jump Flooding Algorithm (JFA) for labeling and a custom parallel reduction kernel for color averaging, eliminating host-device transfer bottlenecks.}
+  \resumeItem{Built a memory-safe, parallel version in Rust with Rayon, providing an alternative for systems without a GPU.}
+  \resumeItemListEnd
+
+  % \resumeProjectHeading
+  % {\textbf{Classification and regression of FER and FG-NET Dataset} $|$ \emph{Python, Scikit-Learn}}{May 2023 -- August 2023}
+  % \resumeItemListStart
+  %   \resumeItem{Analysed and prepared the data with template matching, extracting features, and reducing dimensions with PCA}
+  %   \resumeItem{Compared pixel and features vectors in a linear regression model to predict the age}
+  %   \resumeItem{Compared pixel and features vectors in a logistic regression and multilayer perceptron model to classify}
+  %   \resumeItem{Trained and combined CNN, SVM and unsupervised models to predict the age and emotion of each picture}
+
+  % \resumeProjectHeading
+  % {\textbf{PlexData - Full-stack app for financial analysis } $|$ \emph{React, Python Flask, MongoDB}}{May 2025 -- Present}
+  %     \resumeItemListStart
+  %     \resumeItem{Spearheaded the development of a software solution to automate financial analysis for multi-unit residential investment properties, addressing the need for accurate evaluation tools in real estate portfolio management.}
+  %     \resumeItem{Engineered Python-based data pipelines to aggregate, calculate, and visualize key financial metrics, empowering investors to make informed decisions and streamlining reporting processes across multiple property assets.}
+  %   \resumeItemListEnd
+
+  \resumeProjectHeading {\textbf{Rendering Engine – Monte Carlo Path Tracer} $|$ \emph{Rust}}{September 2025 -- Present}
+  \resumeItemListStart \resumeItem{Built a physically based Monte Carlo path tracer in Rust, covering the full pipeline from ray generation and geometric intersections to global illumination with Multiple Importance Sampling (MIS).}
+  % \resumeItem{Implemented camera models, transformations, and sphere/triangle intersections (Möller–Trumbore) with correct normal interpolation and visibility checks.}
+  \resumeItem{Developed BSDFs with Fresnel effects, cosine-weighted sampling, and analytical PDF evaluation.}
+  \resumeItem{Integrated direct and indirect lighting via modular path tracing with emitter sampling, hierarchical light selection, and variance reduction through MIS.}
+  % \resumeItem{Validated physical correctness through analytic reference scenes and statistical evaluation of sampling distributions.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading {\textbf{Numerical Simulation} $|$ \emph{C++}}{Fall 2022}
+  \resumeItemListStart \resumeItem{Designed and implemented a full C++ linear algebra library with templates, operator overloading, memory management (stack vs heap), and unit testing.}
+  \resumeItem{Developed a 2D mass-spring particle simulation engine with numerical integration (implicit Euler), stiffness/mass matrix assembly, and custom linear solvers (Gauss-Seidel, graph-colored Gauss-Seidel, Cholesky).}
+  \resumeItemListEnd \resumeSubHeadingListEnd
+
+  \vspace{-15pt}
+
+  %-----------PROGRAMMING SKILLS-----------
+  % \section{Technical Skills}
+  %  \begin{itemize}[leftmargin=0.15in, label={}]
+  %     \small{\item{
+  %      \textbf{Languages}{: Python, Rust, C++, Cuda, Javascript, HTML/CSS, C/AL, Powershell, Bash, SQL} \\
+  %      \textbf{Libraries \& Frameworks}{: Pytorch, Scikit-Learn, NumPy, Matplotlib, PlantUML, Vue.JS, ASP.NET\\}
+  %      \textbf{Developer Tools}{: Git, Docker, VS Code, GPT, Copilot Agent, MS Office, Adobe Suite } \\
+  %     }}
+  %  \end{itemize}
+
+  %-------------------------------------------
+
+  %-----------AWARDS & CLASSES-----------
+  % \section{Awards \& Classes}
+  %  \begin{itemize}[leftmargin=0.15in, label={}]
+  %     \small{\item{
+  %      \textbf{Classes}{:Deep learning, Deep learning for computer vision, Advanced machine learning, Intelligent systems and algorithm} \\
+  %      \textbf{Awards}{: NSERC - Undergraduate Student Research Awards, ÉTS Mobility Scholarship, Loto-Québec Scholarship, ÉTS Entrance Scholarship } \\
+  %     }}
+  %  \end{itemize}
+
+  %-------------------------------------------
+\end{document}
