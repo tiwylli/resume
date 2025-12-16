@@ -104,7 +104,7 @@ right=0.5in]{geometry}              % specify right page margin
 \textbf{Computer Vision Research Developer,} {Zebra Technologies} -- Montreal, QC \hfill October 2025 -- Present \\
 \vspace{-9pt}
 \begin{itemize}
-    \item Researching monocular depth estimation and 3D reconstruction techniques for industrial applications using deep learning and computer vision.
+    \item Researching MDE and 3D reconstruction for industrial applications using deep learning and computer vision.
 \end{itemize}
 \fi
 
@@ -129,6 +129,7 @@ right=0.5in]{geometry}              % specify right page margin
   \item Implemented improvements to Agile practices within the team, leading to the adoption of story points.
 \end{itemize}
 
+\ifdefined\cvEngineering
 \textbf{Junior Developer,} {Vokeso (Gold Microsoft Partner)} -- Montreal, QC \hfill May 2021 -- August 2021 \\
 \vspace{-9pt}
 \begin{itemize}
@@ -136,6 +137,16 @@ right=0.5in]{geometry}              % specify right page margin
   \item Developed a website using \textbf{HTML}, \textbf{CSS}, \textbf{React.js}, \textbf{PHP}, \textbf{Postman API}, and \textbf{MSSQL}.
   \item Compartmentalized databases and processes using \textbf{Docker} and multiple Azure VMs.
 \end{itemize}
+\fi
+
+\ifdefined\cvResearch
+\textbf{Junior Developer,} {Vokeso (Gold Microsoft Partner)} -- Montreal, QC \hfill May 2021 -- August 2021 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Developed Dynamics 365 extensions (\textbf{C/AL}) and a full-stack web application (\textbf{React.js, PHP, MSSQL}), while managing containerized database infrastructure using \textbf{Docker} and \textbf{Azure}.
+\end{itemize}
+\fi
+
 
 \vspace{-18.5pt}
 
@@ -169,7 +180,9 @@ right=0.5in]{geometry}              % specify right page margin
 \begin{itemize}
   \item Engineered multiple high-performance implementations of a Voronoi image generator, targeting CPU, multi-core CPU, and GPU architectures to analyze performance trade-offs.
   \item Developed a native CUDA C++ solution using the Jump Flooding Algorithm (JFA) for labeling and a custom parallel reduction kernel for color averaging, eliminating host-device transfer bottlenecks.
+  \ifdefined\cvEngineering
   \item Built a memory-safe, parallel version in Rust with Rayon, providing an alternative for systems without a GPU.
+  \fi
 \end{itemize}
 
 \textbf{Rendering Engine – Monte Carlo Path Tracer} $|$ \emph{Rust, Python, Blender} \hfill \href{https://github.com/tiwylli/PBR-Engine}{github.com/tiwylli/PBR-Engine} \\
