@@ -3,7 +3,7 @@
 *.log
 *.out
 *.synctex.gz
-
+new_truth.pdf
 # Editor settings
 .vscode/
 
